@@ -65,3 +65,15 @@ container_memory_working_set_bytes{namespace="fintech-app", pod=~"backend-api.*"
 ```
 
 This query filters out system noise, isolating the exact RAM utilization of the backend microservices to proactively detect memory leaks.
+
+---
+## 🖼️ Dashboard Portfolio
+
+Below is the standard configuration for the Upscale DV Comprehensive Application Dashboard. This "Single Pane of Glass" is deployed for all FinTech clients.
+
+*(Note: In a production GitHub repo, actual PNG screenshots of the Grafana UI would be embedded here).*
+
+**Dashboard Panels include:**
+1. **Traffic Velocity (RPS):** Tracks `nginx_ingress_controller_requests` to visualize user spikes.
+2. **Backend Memory Footprint:** Tracks `container_memory_working_set_bytes` to detect application memory leaks.
+3. **Infrastructure CPU:** Tracks `node_cpu_seconds_total` to ensure compute availability.
